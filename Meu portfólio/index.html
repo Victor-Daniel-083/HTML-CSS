@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formatos.css">
+    <title>Meu Portfolio</title>
+</head>
+<body>
+    <header id="home">
+        <h1 id="name"> 
+            Victor<span id="name-last">Daniel</span>
+        </h1>
+
+        <div id="menu-burger">
+            <img src="image/menu-burger.svg" alt="menu-burger">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="horizontal-stroke"></div>
+
+    <div id="menu-overlay">
+        <button id="close-menu">&times;</button>
+        <ul>
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </div>
+
+    <main class="container">
+        <section id="inicio">
+            <div class="background-image">
+                <div class="overlay"></div>
+                <div id="info">
+                    <p>Olá, visitantes! 👋</p>
+                    <h1>Meu nome é Victor</h1>
+                    <p>Desenvolvedor Front-End</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <h1>Conheça mais sobre mim!</h1>
+            <hr id="custom-hr">
+            <p>Sou um desenvolvedor front-end apaixonado por tecnologia e em constante busca por excelência. Minhas habilidades em HTML, CSS e JavaScript me permitem transformar ideias em interfaces intuitivas e funcionais. Acredito que a diversidade de pensamentos enriquece qualquer projeto, por isso, valorizo e priorizo o trabalho em equipe para alcançar a melhor eficiência. Meu objetivo é continuar aprimorando minhas habilidades e me tornar um programador de destaque, capaz de enfrentar qualquer desafio que surgir.</p>
+        </section>
+    </main>
+
+    <!-- JavaScript para o menu burger -->
+    <script>
+        const menuBurger = document.getElementById('menu-burger');
+        const nav = document.querySelector('nav');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const closeMenu = document.getElementById('close-menu');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        // Abre o menu
+        menuBurger.addEventListener('click', () => {
+            menuOverlay.style.display = 'flex'; // Exibe o overlay
+            nav.style.display = 'none'; // Esconde a navegação normal
+        });
+
+        // Fecha o menu ao clicar no botão de fechar
+        closeMenu.addEventListener('click', () => {
+            menuOverlay.style.display = 'none'; // Esconde o overlay
+        });
+
+        // Fecha o menu ao clicar em um link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOverlay.style.display = 'none'; // Esconde o overlay ao clicar em um link
+            });
+        });
+    </script>
+</body>
+</html>

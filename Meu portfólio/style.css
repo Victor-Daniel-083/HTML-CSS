@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: #262626;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+header{
+    background-color: #262626;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;    
+    padding: 10px 0;
+}
+
+#menu-burger{
+    display: none;
+}
+#menu-overlay{
+    display: none;
+}
+#name{
+    font-family: 'Saira Stencil One', cursive;
+    margin-inline: 100px;
+    color: white;
+    text-transform: uppercase;
+    
+}
+
+#name-last{
+    text-transform: uppercase;
+    color: #00a2ff;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    margin-right: 120px;
+    gap: 40px;
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #00a2ff;
+    transition: 0,8s;
+}
+
+#horizontal-stroke{
+    border-bottom: 2px solid #00a2ff;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.161);
+}
+
+.background-image {
+    background: url("image/foto\ de\ fundo\ test.jpeg");
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 89vh;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+#inicio h2,h1,p{
+    position: relative;
+    z-index: 2;
+}
+
+#inicio p{
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+#inicio h1{
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: white;
+    margin-block: 20px;
+}
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: white;
+    height: 500px;
+    width: 900px;
+    transition: 0,8s;
+
+}
+
+#sobre h2{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 1.5rem;
+    color: #00a2ff;
+}
+
+#sobre h1{
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+}
+
+#custom-hr{
+    border: 1px solid #00a2ff;
+    margin: 20px 0; 
+}
+
+#sobre p{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+
